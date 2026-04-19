@@ -3,7 +3,7 @@ import pandas as pd
 import google.generativeai as genai
 
 # 1. CẤU HÌNH API KEY (Sử dụng API của bạn)
-API_KEY = "AIzaSyBXa1_zxKW2yqEqNiyDrp1rUtciL6cZ6Lw"
+API_KEY = "AIzaSyBDcOFFUAc3tjm376OOUxHet3LI2taLQ1A"
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-2.5-flash')
 
@@ -15,7 +15,7 @@ st.title("🎓 Trợ lý AI Tư vấn Tuyển sinh Đại học")
 def load_data():
     try:
         data = pd.read_csv("dataset_2026_updated.csv")
-        # Đổi tên các cột sang Tiếng Việt ngay từ đầu để đồng bộ [cite: 58]
+       
         column_mapping = {
             'year': 'Năm',
             'university': 'Trường Đại học',
